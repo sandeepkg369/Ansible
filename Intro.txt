@@ -1,0 +1,4 @@
+NOW I am Starting  to learning Ansible
+Day:1
+1.pre-requsities
+2.Installation
