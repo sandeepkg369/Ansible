@@ -1,0 +1,79 @@
+Ansible
+
+Pre-requisities:
+Python -- 2.7 or Later
+
+LAB SetUP:
+
+Create 2 Instance
+1-Control Node
+1-Manage Node
+
+
+Anisble Installation Steps:
+
+sudo apt update
+sudo apt install ansible -y
+
+
+ansible [core 2.16.3]
+  config file = None
+  configured module search path = ['/home/ubuntu/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/lib/python3/dist-packages/ansible
+  ansible collection location = /home/ubuntu/.ansible/collections:/usr/share/ansible/collections
+  executable location = /usr/bin/ansible
+  python version = 3.12.3 (main, Feb  4 2025, 14:48:35) [GCC 13.3.0] (/usr/bin/python3)
+  jinja version = 3.1.2
+  libyaml = True
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Setup SSH --> Password less Communication between Controller and Manage Node
+
+1. SSH Key Setup:
+Generate a key pair on the control node:
+If you don't have an SSH key, use the ssh-keygen command to create one.
+Copy the public key:
+Locate the public key file (usually ~/.ssh/id_rsa.pub) and copy its contents.
+
+Add the public key to the managed node:
+Log into the managed node via SSH (if you already have a key set up).
+Create the .ssh directory if it doesn't exist (mkdir -p ~/.ssh).
+Create the authorized_keys file if it doesn't exist (touch ~/.ssh/authorized_keys).
+Open the authorized_keys file and paste the public key from the control node into it.
+Change the file permissions to restrict access (chmod 600 ~/.ssh/authorized_keys).
+
+
+
